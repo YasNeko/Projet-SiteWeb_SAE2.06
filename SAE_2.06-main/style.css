@@ -1,0 +1,415 @@
+/* ############### */
+/*      GENERAL    */
+/* ############### */
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto&display=swap');
+
+:root {
+    --text: #BFA181;
+    --background: #0c233d;
+    --primary: #546A7B;
+    --secondary: #546A7B;
+    --accent: #db9345;
+}
+
+* {
+    text-align: center;
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.background {
+    background-color: var(--background);
+}
+
+.flex {
+    display: flex;
+}
+
+.zpadding {
+    padding: 0;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+/* ############### */
+/*      HEADER     */
+/* ############### */
+
+body {
+    overflow-x: hidden;
+    width: 98vw;
+    /* padding left-right but display absolute forced my hand*/
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body>ul {
+    list-style-type: none;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 0.5vw;
+}
+
+/* ############### */
+/*      MAIN       */
+/* ############### */
+
+.main_img {
+    margin-top: 2em;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./images/big_acc.png");
+}
+
+.main_img>img {
+    opacity: 0;
+}
+
+.main_img>h1 {
+    color: white;
+    position: absolute;
+    font-size: 2em;
+    top: 45%;
+    left: 20%;
+}
+
+.divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 85%;
+    margin: 0 auto;
+    height: 3.5px;
+    background-color: #deb992;
+    animation: divider_animation 2s;
+    z-index: 999;
+}
+
+
+@keyframes divider_animation {
+    0% {
+        width: 0
+    }
+
+    to {
+        width: 85%
+    }
+}
+
+/* ############### */
+/*      index      */
+/* ############### */
+
+#texte_explicatif {
+    background-color: var(--background);
+    border-radius: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#texte_explicatif h1 {
+    flex-basis: 100%;
+}
+
+#texte_explicatif p {
+    width: 50%;
+}
+
+/* ############### */
+/*      CARD       */
+/* ############### */
+
+#cards {
+    display: flex;
+    flex-basis: 15vw;
+    justify-content: space-around;
+}
+
+#cards a * {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}   
+
+#cards a img {
+    object-fit: cover;
+    width: 25vw;
+    height: 50vh;
+}
+
+#cards a {
+    background-color: #254B5A;
+    flex-grow: 0;
+    border: var(--accent);
+    border-style: solid;
+    width: 25vw;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.377);
+    height: 75vh;
+    overflow: auto;
+}
+
+#cards a:hover {
+    transform: scale(1.025);
+    transition: 0.3s;
+}
+
+/* ############### */
+/*     CAROUSEL    */
+/* ############### */
+
+.slide_holder * {
+    box-sizing: border-box;
+}
+
+.slide_holder {
+    list-style-type: none;
+    display: flex;
+}
+
+.slide_arrow * {
+    font-size: xx-large;
+    text-decoration: none;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: -20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.377);
+    z-index: 2;
+}
+
+.slide_container {
+    width: 500px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.377);
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.slide_container img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide_container>a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+
+.slide_arrow *:active {
+    animation: slide_arrow_anim 1s
+}
+
+@keyframes slide_arrow_anim {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ############### */
+/*     CAROUSEL    */
+/* ############### */
+
+.carousel-items {
+    display: flex;
+    overflow: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+    margin-left: 1rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+}
+
+.carousel-item ul {
+    padding: 0;
+}
+
+.carousel-item section {
+    width: 50%;
+}
+
+.carousel-item img {
+    width: 50%;
+}
+
+/* ############### */
+/*      CIRCLE     */
+/* ############### */
+
+.circle {
+    z-index: -1;
+    position: absolute;
+    border: 1px solid var(--accent);
+    border-radius: 98%;
+    animation: spin 15s linear 0s infinite reverse
+}
+
+
+.circle-1 {
+    top: 150px;
+    margin-left: -180px;
+    width: 627px;
+    transform-origin: 40% 50% 0;
+    height: 627px;
+}
+
+.circle-2 {
+    top: 340px;
+    margin-right: 130px;
+    width: 440px;
+    transform-origin: 40% 50% 0;
+    height: 440px;
+}
+
+.circle-3 {
+    top: 250px;
+    margin-left: 50px;
+    width: 627px;
+    transform-origin: 30% 40% 0;
+    height: 627px;
+}
+
+.circle-4 {
+    top: 300px;
+    margin-left: 121px;
+    width: 188px;
+    transform-origin: 65% 60% 0;
+    height: 188px;
+}
+
+.circle-5 {
+    top: 250px;
+    width: 406px;
+    transform-origin: 75% 50% 0;
+    height: 406px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* ############### */
+/*      FOOTER     */
+/* ############### */
+
+footer {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: auto;
+}
+
+footer img {
+    height: 100%;
+    transform: scale(0.5);
+}
+
+footer>ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2em;
+    padding-top: 2em;
+
+}
+
+footer>li {
+    display: flex;
+    flex-wrap: wrap;
+    height: 4em;
+}
+
+footer>ul>li {
+    font-size: x-large;
+}
+
+footer>ul>li>ul {
+    list-style-type: none;
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.not_little {
+    display: flex;
+}
+
+
+.not_little * {
+    transform: scale(1);
+}

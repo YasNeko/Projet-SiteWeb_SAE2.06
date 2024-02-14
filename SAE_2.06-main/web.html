@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>R2.06 - Web</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="background">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="./images/icon_home.svg" alt="icon home"> Accueil</a></li>
+        <li><a href="app.html"><img src="./images/icon_code.svg" alt="icon logiciel"> Les métiers du logiciel</a></li>
+        <li><a href="db.html"><img src="./images/icon_data.svg" alt="icon data"> Les métiers de la data</a></li>
+        <li><a href="web.html"><img src="./images/icon_web.svg" alt="icon web"> Les métiers du web</a></li>
+      </ul>
+    </nav>
+    <div class="divider"></div>
+  </header>
+
+  <script src="script.js"></script>
+
+  <main>
+    <div class="circle-group">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-4"></div>
+      <div class="circle circle-5"></div>
+    </div>
+
+    <div class="main_img">
+      <h1>IUT Orléans</h1>
+      <img src="./images/big_acc.png" alt="./images/big_acc.png" />
+    </div>
+
+    <section>
+      <div>
+        <h1>centre d'intérêt generale: Manier les chiffres Travailler avec les nouvelles technologies</h1>
+      </div>
+
+      <article id="cards">
+        <a href="#card_1" class="card">
+            <h2>Chef de produit web et mobile</h2>
+            <img src="./images/ChefAppli.jpg" alt="chef web">
+            <section>
+                <ul>
+                    <li><p>Chef d'une équipe qui travail sur un profuit web ou mobile</p></li>
+                    <li>
+                      <ul>
+                        <h4>Salaire</h4>
+                        <li><b>Senior</b>: 45k ~ 70k€ annuel</li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </a>
+
+        <a href="#card_2" class="card">
+          <h2>Développeur multimédia</h2>
+          <img src="./images/DevMedia.jpg" alt="dev multimédia">
+          <section>
+              <ul>
+                  <li><p>Fusionne des fichier de natures différentes</p></li>
+                  <li>
+                    <ul>
+                      <h4>Salaire</h4>
+                      <li><b>Junior</b>: 22k ~ 35k€ annuel</li>
+                    </ul>
+                  </li>
+              </ul>
+          </section>
+        </a>
+
+        <a href="#card_3" class="card">
+          <h2>Dev front-end</h2>
+          <img src="./images/dev_front-end.jpg" alt="dev front-end">
+          <section>
+              <ul>
+                  <li><p>Programme la partie visible de si te web par exemple</p></li>
+                  <li>
+                    <ul>
+                      <h4>Salaire</h4>
+                      <li><b>Junior</b>: 25k ~ 35k€ annuel</li>
+                      <li><b>Senior</b>: 50k et +</li>
+                    </ul>
+                  </li>
+              </ul>
+          </section>
+        </a>
+      </article>
+
+      <article>
+        <ul class="slide_holder">
+          <li class="slide_arrow">
+            <a onclick="change_slider(-1);">
+              <p>&larr;</p>
+            </a>
+          </li>
+          <li class="slide_container">
+            <div class="slides">
+              <div id="slide_1">
+                <ul>
+                  <li>
+                    <p>1</p>
+                  </li>
+                  <li>
+                    <p>2</p>
+                  </li>
+                  <li>
+                    <p>3</p>
+                  </li>
+                </ul>
+              </div>
+              <div id="slide_2">
+                2
+              </div>
+              <div id="slide_2">
+                3
+              </div>
+          </li>
+          <li class="slide_arrow">
+            <a onclick="change_slider(1);">
+              <p>&rarr;</p>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="carousel">
+      <ul class="carousel-items">
+
+        <li class="carousel-item" id="card_1">
+          <section>
+            <h3>Développeur Informatique</h3>
+            <p>Le développeur logiciel participe à la création de divers logiciels,
+              donc il doit toujours apprendre. Il prend en charge la conception d’un programme depuis le cahier des
+              charges, jusqu'au déploiement.</p>
+            <ul>
+              <h4>Outils utilisés</h4>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+            </ul>
+          </section>
+          <img src="./images/fond_app.png" alt="img_app">
+        </li>
+
+        <li class="carousel-item" id="card_2">
+          <section>
+            <h3>Développeur Informatique</h3>
+            <p>Le développeur logiciel participe à la création de divers logiciels,
+              donc il doit toujours apprendre. Il prend en charge la conception d’un programme depuis le cahier des
+              charges, jusqu'au déploiement.</p>
+            <ul>
+              <h4>Outils utilisés</h4>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+            </ul>
+          </section>
+          <img src="./images/fond_app.png" alt="img_app">
+        </li>
+
+        <li class="carousel-item" id="card_3">
+          <section>
+            <h3>Développeur Informatique</h3>
+            <p>Le développeur logiciel participe à la création de divers logiciels,
+              donc il doit toujours apprendre. Il prend en charge la conception d’un programme depuis le cahier des
+              charges, jusqu'au déploiement.</p>
+            <ul>
+              <h4>Outils utilisés</h4>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+            </ul>
+          </section>
+          <img src="./images/fond_app.png" alt="img_app">
+        </li>
+        <li class="carousel-item">
+          <section>
+            <h3>Développeur Informatique</h3>
+            <p>Le développeur logiciel participe à la création de divers logiciels,
+              donc il doit toujours apprendre. Il prend en charge la conception d’un programme depuis le cahier des
+              charges, jusqu'au déploiement.</p>
+            <ul>
+              <h4>Outils utilisés</h4>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+            </ul>
+          </section>
+          <img src="./images/fond_app.png" alt="img_app">
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="divider"></div>
+    <ul>
+      <li>
+        <img style="height: 4em;" src="./images/logo_creat.png" alt="./images/logo_creat.png" />
+      </li>
+      <li>Créateurs :</li>
+      <li>Mickael Riego</li>
+      <li>Pavard Arthur</li>
+      <li>Yasin Keskin</li>
+      <li>
+        <ul class="zpadding">
+          <li>
+            <a href="Source.html">
+              <h3 class="underline">Sources</h3>
+            </a>
+          </li>
+          <li class="not_little">
+            <img src="./images/logo_info_quadri.png" alt="./images/logo_info_quadri.png" />
+            <img src="./images/logo_univ_orleans.png" alt="./images/logo_univ_orleans.png" />
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>
